@@ -69,8 +69,7 @@ stmt
     : lVal '=' exp ';' # assign
     | (exp)? ';' # exprStmt
     | block # blockStmt
-    | 'if' '(' cond ')' stmt # ifStmt
-    | 'if' '(' cond ')' stmt 'else' stmt # ifElse
+    | 'if' '(' cond ')' stmt ('else' stmt)? # ifElse
     | 'while' '(' cond ')' stmt # while
     | 'break' ';' # break
     | 'continue' ';' # continue
